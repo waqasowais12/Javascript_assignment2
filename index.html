@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width: 180px;
+            min-height: 50px;
+            max-height: auto;
+            margin: 20px;
+            background-color: black;
+            color: white;
+            font-size: 18px;
+            font-weight: 400;
+            padding: 10px;
+            border: none;
+            border-radius: 30px;
+            text-align: center;
+            transform: scale(1, 1.2);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="add()">Addition</button>
+    <button onclick="subt()">Subtraction</button>
+    <button onclick="mult()">Multiplication</button>
+    <button onclick="divi()">Division</button>
+    <button onclick="greeting()">Greet</button>
+    <button onclick="tables()">Table</button>
+    <button onclick="city()">City</button>
+    <button onclick="scri()">Run Script</button>
+    <button onclick="mark()">Mark Sheet</button>
+    <script>
+        //Ans 1 & 2
+        function add() {
+            var num1 = parseInt(prompt('Enter the first number '))
+            var num2 = parseInt(prompt('Enter the second number '))
+
+            var ans = num1 + num2
+
+            alert(`The addition is ` + ans)
+        }
+        function subt() {
+            var num1 = parseInt(prompt('Enter the first number '))
+            var num2 = parseInt(prompt('Enter the second number '))
+
+            var ans = num1 - num2
+
+            alert(`The subtraction is ` + ans)
+        }
+        function mult() {
+            var num1 = parseInt(prompt('Enter the first number '))
+            var num2 = parseInt(prompt('Enter the second number '))
+
+            var ans = num1 * num2
+
+            alert(`The multiplication is ` + ans)
+        }
+        function divi() {
+            var num1 = parseInt(prompt('Enter the first number '))
+            var num2 = parseInt(prompt('Enter the second number '))
+
+            var ans = num1 / num2
+
+            alert(`The division is ` + ans)
+        }
+        // ANS # 3
+        var a
+        console.log("Declare: " + a)
+        a = 10
+        console.log("Value: " + a)
+        a++
+        console.log("Increment: " + a)
+        a = a + 7
+        console.log("Add 7: " + a)
+        a--
+        console.log("Decrement: " + a)
+        m = a % 3
+        console.log("Remainder: " + m)
+
+
+        // ANS # 4
+        t = 600
+        total = 600 * 5
+        console.log("Total rice of ticket: " + total)
+
+        //ANS # 5
+        console.log("Table of 4")
+        for (var i = 1; i <= 10; i++) {
+            console.log("4 X " + i + " = " + 4 * i)
+        }
+
+        // ANS # 6
+
+        cel = 40
+        ans1 = (cel * 9 / 5) + 32
+        fah = 100
+        ans2 = (fah - 32) * (5 / 9)
+        console.log("Fahrenheit " + ans1)
+        console.log("Celsius " + ans2)
+
+        //ANS # 7
+
+        item1 = 1599
+        qty1 = 3
+        item2 = 1999
+        qty2 = 2
+        tax = 499
+        totalp = (item1 * qty1) + (item2 * qty2) + tax
+        console.log("Total Price: " + totalp)
+
+        //ANS # 8
+        Tmarks = 980
+        obt = 804
+        perc = (obt / Tmarks) * 100
+        console.log("Percentage: " + perc)
+
+        //ANS # 9
+        dollar = 10
+        riyal = 25
+        rs = (dollar * 104.8) + (riyal * 28)
+        console.log("Currency: " + rs)
+
+
+        // NEW CHAPTER 
+
+        // ANS # 1
+        b = 10
+        ++b
+        console.log("++b: " + b)
+        b++
+        console.log("b++: " + b)
+        --b
+        console.log("--b: " + b)
+        b--
+        console.log("b--: " + b)
+
+        // ANS # 2
+
+        a = 2
+        b = 1
+        result = --a
+        console.log(result)
+        a = 2
+        b = 1
+        result = --a - --b
+        console.log(result)
+        a = 2
+        b = 1
+        result = --a - --b + ++b
+        console.log(result)
+        a = 2
+        b = 1
+        result = --a - --b + ++b + b--
+        console.log(result)
+
+        // ANS # 3
+
+        function greeting() {
+            name = (prompt('Enter Your Name'))
+            alert(`Hello, ` + name + '! How can I assist you today?')
+        }
+
+        // ANS # 4
+
+        function tables() {
+            no = parseInt(prompt('Enter table no: '))
+            if (no > 0) {
+
+                console.log("Table of " + no)
+                for (var i = 1; i <= 10; i++) {
+                    console.log(no + " X " + i + " = " + no * i)
+                }
+            }
+            else {
+                console.log("Table of 5")
+                for (var i = 1; i <= 10; i++) {
+                    console.log("5 X " + i + " = " + 5 * i)
+                }
+            }
+        }
+
+        // NEW CHAPTER 
+
+        // ANS # 1
+
+        function city() {
+            cit = (prompt('Enter Your City: '))
+            if (cit == 'Karach' || cit == 'karachi') {
+                console.log("Welcome to city of lights")
+            }
+            else {
+                console.log("Welcome")
+            }
+        }
+
+        // ANS # 2
+
+        function gender() {
+            gen = (prompt('Enter Your Gender: '))
+            if (gen == 'male' || gen == 'Male') {
+                console.log("Good Morning Sir.")
+            }
+            else if (gen == 'female' || gen == 'Female') {
+                console.log("Good Morning Ma'am.")
+            }
+        }
+
+        // ANS # 5
+        function scri() {
+            var a = 4;
+            if (++a === 5) {
+                alert("given condition for variable a is true");
+            }
+            var b = 82;
+            if (b++ === 83) {
+                alert("given condition for variable b is true");
+            }
+            var c = 12;
+            if (c++ === 13) {
+                alert("condition 1 is true");
+            }
+            if (c === 13) {
+                alert("condition 2 is true");
+            }
+            if (++c < 14) {
+                alert("condition 3 is true");
+            }
+            if (c === 14) {
+                alert("condition 4 is true");
+            }
+            var materialCost = 20000;
+            var laborCost = 2000;
+            var totalCost = materialCost + laborCost;
+            if (totalCost === laborCost + materialCost) {
+                alert("The cost equals");
+            }
+            if (true) {
+                alert("True");
+            }
+            if (false) {
+                alert("False");
+            }
+            if ("car" < "cat") {
+                alert("car is smaller than cat");
+            }
+        }
+
+        function marks() {
+            sub1 = parseInt(prompt('Enter marks of English: '))
+            sub2 = parseInt(prompt('Enter marks of Maths: '))
+            sub3 = parseInt(prompt('Enter marks of Physics: '))
+            obt = sub1 + sub2 + sub3
+            total = 300
+            per = (obt/total)*100
+            if(per >= 80)
+            {
+                grade = "A+"
+                remarks = "Exellent"
+            }
+            else if(per >= 70 || per < 80)
+            {
+                grade = "A"
+                remarks = "Good"
+            }
+            else if(per >= 60 || per < 70)
+            {
+                grade = "B"
+                remarks = "You need to improve"
+            }
+            else{
+                grade = "Fail"
+                remarks = "Sorry"
+            }
+            console.log("Total Marks: " + total)
+            console.log("Obtain Marks: " + obt)
+            console.log("ercentage: " + per)
+            console.log("Grade: " + grade)
+            console.log("Remarks: " + remarks)
+            
+        }
+
+    </script>
+</body>
+
+</html>
